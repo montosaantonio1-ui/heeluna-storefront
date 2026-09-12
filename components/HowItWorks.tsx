@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const steps = [
   {
     n: "01",
@@ -6,13 +8,13 @@ const steps = [
   },
   {
     n: "02",
-    title: "Choose your mode",
-    body: "Pick gentle for regular upkeep, or intensive for rougher, more stubborn areas.",
+    title: "Choose your roller",
+    body: "Snap in extra coarse, regular, or gentle — whichever your heels need today.",
   },
   {
     n: "03",
     title: "Glide",
-    body: "Move the quartz roller in slow, circular motions over clean, dry skin.",
+    body: "Move the roller in slow, circular motions over clean, dry skin.",
   },
   {
     n: "04",
@@ -31,20 +33,27 @@ export default function HowItWorks() {
         </h2>
       </div>
 
-      <ol className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        {steps.map((step, i) => (
-          <li key={step.n} className="relative pl-1">
-            <span className="font-display text-4xl text-sage">{step.n}</span>
-            <h3 className="mt-3 font-display text-lg text-ink">{step.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink/70">{step.body}</p>
-            {i < steps.length - 1 && (
-              <span className="pointer-events-none absolute right-[-1.1rem] top-3 hidden text-sage/60 sm:block lg:right-[-1.4rem]">
-                →
-              </span>
-            )}
-          </li>
-        ))}
-      </ol>
+      <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-line shadow-soft">
+          <Image
+            src="/images/pedicure-steps-1.png"
+            alt="Heeluna Pro pedicure ritual: choose the roller, buff, moisturize"
+            fill
+            sizes="(min-width: 1024px) 560px, 100vw"
+            className="object-cover"
+          />
+        </div>
+
+        <ol className="grid gap-8 sm:grid-cols-2">
+          {steps.map((step) => (
+            <li key={step.n} className="relative pl-1">
+              <span className="font-display text-4xl text-sage">{step.n}</span>
+              <h3 className="mt-3 font-display text-lg text-ink">{step.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink/70">{step.body}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
