@@ -15,8 +15,8 @@ import type { Product } from "./types";
  * product and only ever uses the first variant's id for checkout.
  */
 export const fallbackProduct: Product = {
-  id: "fallback-heeluna-pro",
-  handle: "heeluna-pro-electric-callus-remover",
+  id: "gid://shopify/Product/15085950665071",
+  handle: "heeluna-pro™-electric-callus-remover-1",
   title: "Heeluna Pro™ Electric Callus Remover",
   descriptionHtml:
     "<p>A rechargeable, waterproof electric callus remover with a dual-speed motor and a natural quartz roller head — built for a salon-quality foot-care routine at home.</p>",
@@ -33,7 +33,7 @@ export const fallbackProduct: Product = {
   },
   variants: [
     {
-      id: "fallback-variant-1",
+      id: "gid://shopify/ProductVariant/53466445807983",
       title: "White",
       availableForSale: true,
       quantityAvailable: 10,
