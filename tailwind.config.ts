@@ -46,10 +46,15 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-14px)" },
         },
+        "float-shadow": {
+          "0%, 100%": { transform: "scaleX(1)", opacity: "0.4" },
+          "50%": { transform: "scaleX(0.78)", opacity: "0.2" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s ease-out both",
         float: "float 4.5s ease-in-out infinite",
+        "float-shadow": "float-shadow 4.5s ease-in-out infinite",
       },
     },
   },

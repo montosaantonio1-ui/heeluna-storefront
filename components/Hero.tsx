@@ -63,14 +63,15 @@ function FeatureIcon({ name }: { name: string }) {
 function FeatureBadge({ label, icon, align }: { label: string; icon: string; align: "left" | "right" }) {
   return (
     <div
-      className={`flex items-center gap-2.5 rounded-full border border-line bg-card/90 py-2 pl-3 pr-4 shadow-soft backdrop-blur ${
+      data-cursor-hover
+      className={`group flex cursor-default items-center gap-2.5 rounded-full border border-line bg-card/90 py-2 pl-3 pr-4 shadow-soft backdrop-blur transition-all duration-300 hover:scale-110 hover:border-clay hover:bg-clay/10 hover:shadow-lift ${
         align === "right" ? "flex-row-reverse text-right" : ""
       }`}
     >
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-pine text-card">
+      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-pine text-card transition-colors duration-300 group-hover:bg-clay">
         <FeatureIcon name={icon} />
       </span>
-      <span className="text-sm font-medium text-ink">{label}</span>
+      <span className="text-sm font-medium text-ink transition-colors duration-300 group-hover:text-clay-dark">{label}</span>
     </div>
   );
 }
@@ -91,21 +92,27 @@ export default function Hero() {
         </p>
       </div>
 
-      <div className="relative mx-auto mt-6 flex max-w-3xl animate-fade-up items-center justify-center [animation-delay:150ms]">
+      <div className="relative mx-auto mt-10 flex max-w-3xl animate-fade-up items-center justify-center [animation-delay:150ms]">
         <div className="absolute left-0 top-1/2 hidden -translate-y-1/2 flex-col gap-5 lg:flex">
           {leftFeatures.map((f) => (
             <FeatureBadge key={f.label} label={f.label} icon={f.icon} align="left" />
           ))}
         </div>
 
-        <div className="relative aspect-[2/3] w-48 shrink-0 animate-float sm:w-60">
-          <Image
-            src="/images/product-packshot-1.png"
-            alt="Heeluna Pro™ Electric Callus Remover"
-            fill
-            priority
-            sizes="(min-width: 1024px) 320px, 240px"
-            className="object-contain drop-shadow-2xl"
+        <div className="relative flex w-64 shrink-0 flex-col items-center sm:w-80">
+          <div className="relative aspect-[2/3] w-full animate-float">
+            <Image
+              src="/images/product-packshot-cutout-1.png"
+              alt="Heeluna Pro™ Electric Callus Remover"
+              fill
+              priority
+              sizes="(min-width: 1024px) 400px, 280px"
+              className="object-contain"
+            />
+          </div>
+          <div
+            aria-hidden="true"
+            className="h-5 w-40 animate-float-shadow rounded-[50%] bg-ink/30 blur-xl sm:w-48"
           />
         </div>
 
@@ -116,13 +123,17 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 grid max-w-lg grid-cols-2 gap-3 sm:grid-cols-3 lg:hidden">
+      <div className="mx-auto mt-6 grid max-w-lg grid-cols-2 gap-3 sm:grid-cols-3 lg:hidden">
         {[...leftFeatures, ...rightFeatures].map((f) => (
-          <div key={f.label} className="flex items-center gap-2 rounded-full border border-line bg-card px-3 py-2">
-            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-pine text-card">
+          <div
+            key={f.label}
+            data-cursor-hover
+            className="group flex cursor-default items-center gap-2 rounded-full border border-line bg-card px-3 py-2 transition-all duration-300 hover:scale-105 hover:border-clay hover:bg-clay/10"
+          >
+            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-pine text-card transition-colors duration-300 group-hover:bg-clay">
               <FeatureIcon name={f.icon} />
             </span>
-            <span className="text-xs font-medium text-ink">{f.label}</span>
+            <span className="text-xs font-medium text-ink transition-colors duration-300 group-hover:text-clay-dark">{f.label}</span>
           </div>
         ))}
       </div>
