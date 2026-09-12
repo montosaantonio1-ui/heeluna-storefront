@@ -136,7 +136,7 @@ export async function getProductByHandle(handle: string): Promise<Product | null
   const data = await shopifyFetch<{ product: any }>(
     query,
     { handle },
-    { revalidate: 60 }
+    { cache: "no-store" }
   );
 
   return data.product ? normalizeProduct(data.product) : null;

@@ -14,7 +14,7 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import StickyBuyBar from "@/components/StickyBuyBar";
 
-export const revalidate = 60;
+export const revalidate = 0;
 
 async function getProduct() {
   const handle = process.env.NEXT_PUBLIC_PRODUCT_HANDLE || fallbackProduct.handle;
