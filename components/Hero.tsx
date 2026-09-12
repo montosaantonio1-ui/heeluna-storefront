@@ -1,4 +1,7 @@
 import Image from "next/image";
+import type { Product } from "@/lib/types";
+import { formatMoney } from "@/lib/format";
+import AddToCartButton from "./AddToCartButton";
 
 const leftFeatures = [
   { label: "11,000 RPM motor", icon: "speed" },
@@ -76,7 +79,10 @@ function FeatureBadge({ label, icon, align }: { label: string; icon: string; ali
   );
 }
 
-export default function Hero() {
+export default function Hero({ product }: { product: Product }) {
+  const variant = product.variants[0];
+  const price = formatMoney(variant.price);
+
   return (
     <section id="top" className="mx-auto max-w-content px-5 pb-16 pt-12 sm:px-8 sm:pt-16 lg:pb-24">
       <div className="mx-auto max-w-2xl animate-fade-up text-center">
@@ -90,6 +96,17 @@ export default function Hero() {
           Heeluna Pro™ buffs away rough, dry skin and calluses with the same gentle precision as a
           professional pedicure — quietly, safely, and on your own schedule.
         </p>
+
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
+          <AddToCartButton variantId={variant.id} label={`Buy now — ${price}`} />
+          <a
+            href="#buy"
+            data-cursor-hover
+            className="text-sm font-medium text-ink/60 underline-offset-4 transition-colors hover:text-clay-dark hover:underline"
+          >
+            See details &amp; gallery
+          </a>
+        </div>
       </div>
 
       <div className="relative mx-auto mt-10 flex max-w-3xl animate-fade-up items-center justify-center [animation-delay:150ms]">

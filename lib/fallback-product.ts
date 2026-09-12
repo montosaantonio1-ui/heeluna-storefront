@@ -24,7 +24,7 @@ export const fallbackProduct: Product = {
     { url: "/images/product-packshot-1.png", altText: "Heeluna Pro electric callus remover, front view", width: 1024, height: 1536 },
     { url: "/images/hero-lifestyle-1.png", altText: "Heeluna Pro, foot-care ritual at home", width: 1122, height: 1402 },
     { url: "/images/kit-accessories-1.png", altText: "Heeluna Pro with its 3 interchangeable roller heads, cleaning brush, and USB cable", width: 1122, height: 1402 },
-    { url: "https://sc04.alicdn.com/kf/Hfc594c41c3b44de5846ed6d5502cc580k.jpg", altText: "Heeluna Pro in use on a heel", width: 1000, height: 1000 },
+    { url: "/images/heel-kit-collage-1.png", altText: "Heeluna Pro results on heels, with the full roller kit laid out", width: 1122, height: 1402 },
   ],
   options: [{ name: "Style", values: ["White"] }],
   priceRange: {

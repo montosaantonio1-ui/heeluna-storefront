@@ -38,8 +38,14 @@ export default function Header() {
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-ink/80 md:flex">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-pine">
+            <a
+              key={l.href}
+              href={l.href}
+              data-cursor-hover
+              className="group relative py-1 transition-colors duration-200 hover:text-pine"
+            >
               {l.label}
+              <span className="absolute inset-x-0 -bottom-0.5 h-[2px] origin-left scale-x-0 bg-clay transition-transform duration-300 ease-out group-hover:scale-x-100" />
             </a>
           ))}
         </nav>
@@ -85,7 +91,11 @@ export default function Header() {
           <ul className="flex flex-col gap-4 text-sm font-medium text-ink/80">
             {navLinks.map((l) => (
               <li key={l.href}>
-                <a href={l.href} onClick={() => setMenuOpen(false)} className="block hover:text-pine">
+                <a
+                  href={l.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="group relative block py-1 transition-colors duration-200 hover:text-pine hover:pl-2"
+                >
                   {l.label}
                 </a>
               </li>

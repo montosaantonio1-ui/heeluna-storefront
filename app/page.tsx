@@ -36,7 +36,7 @@ export default async function Home() {
     <>
       <Header />
       <main className="pb-24 lg:pb-0">
-        <Hero />
+        <Hero product={product} />
         <Reveal><Benefits /></Reveal>
         <Reveal><RollerGuide /></Reveal>
         <Reveal><HowItWorks /></Reveal>
