@@ -22,6 +22,7 @@ export const fallbackProduct: Product = {
     "<p>A rechargeable, waterproof electric callus remover with a dual-speed motor and a natural quartz roller head — built for a salon-quality foot-care routine at home.</p>",
   images: [
     { url: "/images/hero-lifestyle-1.png", altText: "Heeluna Pro, foot-care ritual at home", width: 1123, height: 1416 },
+    { url: "/images/product-context-1.png", altText: "Heeluna Pro on a linen cloth with a terracotta bowl", width: 1244, height: 1244 },
     { url: "https://sc04.alicdn.com/kf/Hbead05ce1e41420d8ee99395b4c6d6beX.jpg", altText: "Heeluna Pro electric callus remover, front view", width: 1000, height: 1000 },
     { url: "https://sc04.alicdn.com/kf/Hfc594c41c3b44de5846ed6d5502cc580k.jpg", altText: "Heeluna Pro in use on a heel", width: 1000, height: 1000 },
     { url: "https://sc04.alicdn.com/kf/H1e6301d85a174b3ab4369b245dd72492t.jpg", altText: "Heeluna Pro roller head detail", width: 1000, height: 1000 },
