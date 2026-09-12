@@ -25,6 +25,9 @@ export const fallbackProduct: Product = {
     { url: "/images/product-context-1.png", altText: "Heeluna Pro on a linen cloth with a terracotta bowl", width: 1244, height: 1244 },
     { url: "/images/kit-accessories-1.png", altText: "Heeluna Pro with its 3 interchangeable roller heads, cleaning brush, and USB cable", width: 1244, height: 1244 },
     { url: "/images/roller-refills-infographic-1.png", altText: "Heeluna Pro roller guide: extra coarse for tough calluses, regular for dead skin, gentle for daily maintenance", width: 1244, height: 1244 },
+    { url: "/images/led-indicator-1.png", altText: "Heeluna Pro built-in LED light illuminating the roller area, doubling as a power indicator", width: 1600, height: 900 },
+    { url: "/images/pedicure-steps-1.png", altText: "Heeluna Pro 3-step pedicure ritual: choose the roller, buff, moisturize", width: 1244, height: 1244 },
+    { url: "/images/heel-kit-collage-1.png", altText: "Heeluna Pro results on heels, with the full roller kit laid out", width: 1123, height: 1416 },
     { url: "https://sc04.alicdn.com/kf/Hbead05ce1e41420d8ee99395b4c6d6beX.jpg", altText: "Heeluna Pro electric callus remover, front view", width: 1000, height: 1000 },
     { url: "https://sc04.alicdn.com/kf/Hfc594c41c3b44de5846ed6d5502cc580k.jpg", altText: "Heeluna Pro in use on a heel", width: 1000, height: 1000 },
     { url: "https://sc04.alicdn.com/kf/H1e6301d85a174b3ab4369b245dd72492t.jpg", altText: "Heeluna Pro roller head detail", width: 1000, height: 1000 },
@@ -55,6 +58,7 @@ export type SpecRow = { label: string; value: string };
 export const specs: SpecRow[] = [
   { label: "Motor speed", value: "11,000 RPM" },
   { label: "Working modes", value: "2 (gentle + intensive)" },
+  { label: "LED light", value: "Built-in — illuminates the roller area and doubles as a power indicator" },
   { label: "Waterproof rating", value: "IPX6 — shower safe" },
   { label: "Battery", value: "600 mAh, USB rechargeable" },
   { label: "Charge time", value: "~3 hours" },
