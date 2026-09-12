@@ -28,7 +28,7 @@ export const fallbackProduct: Product = {
     { url: "/images/led-indicator-1.png", altText: "Heeluna Pro built-in LED light illuminating the roller area, doubling as a power indicator", width: 1600, height: 900 },
     { url: "/images/pedicure-steps-1.png", altText: "Heeluna Pro 3-step pedicure ritual: choose the roller, buff, moisturize", width: 1244, height: 1244 },
     { url: "/images/heel-kit-collage-1.png", altText: "Heeluna Pro results on heels, with the full roller kit laid out", width: 1123, height: 1416 },
-    { url: "https://sc04.alicdn.com/kf/Hbead05ce1e41420d8ee99395b4c6d6beX.jpg", altText: "Heeluna Pro electric callus remover, front view", width: 1000, height: 1000 },
+    { url: "/images/product-packshot-1.png", altText: "Heeluna Pro electric callus remover, front view", width: 1063, height: 1600 },
     { url: "https://sc04.alicdn.com/kf/Hfc594c41c3b44de5846ed6d5502cc580k.jpg", altText: "Heeluna Pro in use on a heel", width: 1000, height: 1000 },
     { url: "https://sc04.alicdn.com/kf/H1e6301d85a174b3ab4369b245dd72492t.jpg", altText: "Heeluna Pro roller head detail", width: 1000, height: 1000 },
     { url: "https://sc04.alicdn.com/kf/H4728ccb9af234daaa1083efca5503026r.jpg", altText: "Heeluna Pro with USB charging cable", width: 1000, height: 1000 },
@@ -48,7 +48,7 @@ export const fallbackProduct: Product = {
       price: { amount: "49.99", currencyCode: "USD" },
       compareAtPrice: { amount: "79.99", currencyCode: "USD" },
       selectedOptions: [{ name: "Style", value: "White" }],
-      image: { url: "https://sc04.alicdn.com/kf/Hbead05ce1e41420d8ee99395b4c6d6beX.jpg", altText: "Heeluna Pro, White", width: 1000, height: 1000 },
+      image: { url: "/images/product-packshot-1.png", altText: "Heeluna Pro, White", width: 1063, height: 1600 },
     },
   ],
 };
