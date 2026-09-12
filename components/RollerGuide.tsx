@@ -4,9 +4,27 @@ import { useState } from "react";
 import Image from "next/image";
 
 const rollers = [
-  { key: "extra", label: "Extra coarse", body: "For tough, cracked calluses that need real work." },
-  { key: "regular", label: "Regular", body: "For everyday dead skin and light buildup." },
-  { key: "gentle", label: "Gentle", body: "For light, daily maintenance and sensitive skin." },
+  {
+    key: "extra",
+    label: "Extra coarse",
+    body: "For tough, cracked calluses that need real work.",
+    image: "/images/roller-extra-coarse-1.png",
+    alt: "Extra coarse roller — targeted smoothing for tough calluses",
+  },
+  {
+    key: "regular",
+    label: "Regular",
+    body: "For everyday dead skin and light buildup.",
+    image: "/images/roller-regular-1.png",
+    alt: "Regular coarse roller — everyday smoothing for dead skin removal",
+  },
+  {
+    key: "gentle",
+    label: "Gentle",
+    body: "For light, daily maintenance and sensitive skin.",
+    image: "/images/roller-gentle-1.png",
+    alt: "Fine roller — gentle care for daily maintenance",
+  },
 ];
 
 export default function RollerGuide() {
@@ -44,13 +62,18 @@ export default function RollerGuide() {
         </div>
 
         <div className="relative aspect-square overflow-hidden rounded-3xl border border-line shadow-soft">
-          <Image
-            src="/images/roller-refills-infographic-1.png"
-            alt="Heeluna Pro roller guide: extra coarse for tough calluses, regular for dead skin, gentle for daily maintenance"
-            fill
-            sizes="(min-width: 1024px) 560px, 100vw"
-            className="object-cover"
-          />
+          {rollers.map((r) => (
+            <Image
+              key={r.key}
+              src={r.image}
+              alt={r.alt}
+              fill
+              sizes="(min-width: 1024px) 560px, 100vw"
+              className={`object-cover transition-opacity duration-500 ${
+                active === r.key ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>
