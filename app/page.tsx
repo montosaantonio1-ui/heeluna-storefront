@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Benefits from "@/components/Benefits";
 import RollerGuide from "@/components/RollerGuide";
+import Reveal from "@/components/Reveal";
 import HowItWorks from "@/components/HowItWorks";
 import Specs from "@/components/Specs";
 import SocialProof from "@/components/SocialProof";
@@ -35,13 +36,13 @@ export default async function Home() {
       <Header />
       <main className="pb-24 lg:pb-0">
         <Hero product={product} />
-        <Benefits />
-        <RollerGuide />
-        <HowItWorks />
-        <Specs product={product} />
-        <SocialProof />
-        <FAQ />
-        <FinalCTA product={product} />
+        <Reveal><Benefits /></Reveal>
+        <Reveal><RollerGuide /></Reveal>
+        <Reveal><HowItWorks /></Reveal>
+        <Reveal><Specs product={product} /></Reveal>
+        <Reveal><SocialProof /></Reveal>
+        <Reveal><FAQ /></Reveal>
+        <Reveal><FinalCTA product={product} /></Reveal>
       </main>
       <Footer />
       <StickyBuyBar product={product} />

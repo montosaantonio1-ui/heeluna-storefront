@@ -86,8 +86,11 @@ export default function Benefits() {
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {benefits.map((b) => (
-            <div key={b.title} className="rounded-2xl border border-line bg-stone/40 p-6">
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-pine text-card">
+            <div
+              key={b.title}
+              className="group rounded-2xl border border-line bg-stone/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-pine/30 hover:shadow-soft"
+            >
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-pine text-card transition duration-300 group-hover:scale-110 group-hover:bg-clay">
                 <BenefitIcon name={b.icon} />
               </div>
               <h3 className="mt-5 font-display text-lg text-ink">{b.title}</h3>

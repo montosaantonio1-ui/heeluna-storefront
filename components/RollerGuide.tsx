@@ -1,6 +1,17 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
+const rollers = [
+  { key: "extra", label: "Extra coarse", body: "For tough, cracked calluses that need real work." },
+  { key: "regular", label: "Regular", body: "For everyday dead skin and light buildup." },
+  { key: "gentle", label: "Gentle", body: "For light, daily maintenance and sensitive skin." },
+];
+
 export default function RollerGuide() {
+  const [active, setActive] = useState(rollers[0].key);
+
   return (
     <section className="mx-auto max-w-content px-5 py-16 sm:px-8 lg:py-24">
       <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
@@ -13,17 +24,23 @@ export default function RollerGuide() {
             Heeluna Pro™ ships with all three interchangeable roller heads, plus a cleaning brush and USB
             cable — swap heads in seconds, no tools required.
           </p>
-          <ul className="mt-6 flex flex-col gap-3 text-sm text-ink/75">
-            <li>
-              <span className="font-semibold text-ink">Extra coarse</span> — for tough, cracked calluses
-            </li>
-            <li>
-              <span className="font-semibold text-ink">Regular</span> — for everyday dead skin
-            </li>
-            <li>
-              <span className="font-semibold text-ink">Gentle</span> — for light, daily maintenance
-            </li>
-          </ul>
+
+          <div className="mt-6 flex flex-col gap-3">
+            {rollers.map((r) => (
+              <button
+                key={r.key}
+                type="button"
+                onClick={() => setActive(r.key)}
+                aria-pressed={active === r.key}
+                className={`rounded-xl border px-4 py-3 text-left transition ${
+                  active === r.key ? "border-clay bg-clay/5" : "border-line hover:border-pine/40"
+                }`}
+              >
+                <span className={`font-semibold ${active === r.key ? "text-clay-dark" : "text-ink"}`}>{r.label}</span>
+                <p className="mt-1 text-sm text-ink/70">{r.body}</p>
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="relative aspect-square overflow-hidden rounded-3xl border border-line shadow-soft">
