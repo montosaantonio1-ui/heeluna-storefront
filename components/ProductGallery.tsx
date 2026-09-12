@@ -40,7 +40,7 @@ export default function ProductGallery({ images, title }: { images: ProductImage
             fill
             priority
             sizes="(min-width: 1024px) 520px, 100vw"
-            className="object-cover transition duration-500 group-hover:scale-[1.03]"
+            className="object-contain transition duration-500 group-hover:scale-[1.03]"
           />
         )}
         <span className="absolute left-4 top-4 rounded-full bg-pine px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-card">

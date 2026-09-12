@@ -61,7 +61,7 @@ export default function RollerGuide() {
           </div>
         </div>
 
-        <div className="relative aspect-square overflow-hidden rounded-3xl border border-line shadow-soft">
+        <div className="relative aspect-square overflow-hidden rounded-3xl border border-line bg-card shadow-soft">
           {rollers.map((r) => (
             <Image
               key={r.key}

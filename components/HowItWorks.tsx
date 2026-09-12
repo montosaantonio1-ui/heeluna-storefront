@@ -34,13 +34,13 @@ export default function HowItWorks() {
       </div>
 
       <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-line shadow-soft">
+        <div className="relative aspect-square overflow-hidden rounded-3xl border border-line shadow-soft bg-card">
           <Image
             src="/images/pedicure-steps-1.png"
             alt="Heeluna Pro pedicure ritual: choose the roller, buff, moisturize"
             fill
             sizes="(min-width: 1024px) 560px, 100vw"
-            className="object-cover"
+            className="object-contain"
           />
         </div>
 

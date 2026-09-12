@@ -79,7 +79,7 @@ export default function Benefits() {
               alt="Heeluna Pro built-in LED light illuminating the roller area, doubling as a power indicator"
               fill
               sizes="(min-width: 1024px) 560px, 100vw"
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         </div>

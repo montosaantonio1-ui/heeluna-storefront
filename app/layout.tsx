@@ -3,6 +3,8 @@ import { Fraunces, Work_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
+import CustomCursor from "@/components/CustomCursor";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -36,6 +38,8 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${fraunces.variable} ${workSans.variable} ${jetbrainsMono.variable}`}>
       <body>
+        <ScrollProgress />
+        <CustomCursor />
         <CartProvider>
           {children}
           <CartDrawer />
