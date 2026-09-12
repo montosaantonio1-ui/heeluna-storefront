@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-line/70 bg-pine text-card/80">
-      <div className="mx-auto max-w-content px-5 py-12 sm:px-8">
+      <div className="mx-auto max-w-content px-5 pb-24 pt-12 sm:px-8 lg:pb-12">
         <div className="flex flex-col gap-8 sm:flex-row sm:justify-between">
           <div>
             <p className="font-display text-xl text-card">Heeluna™</p>

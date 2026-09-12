@@ -36,7 +36,11 @@ export default function BuySection({ product }: { product: Product }) {
           </div>
 
           <div className="mt-7">
-            <AddToCartButton variantId={variant.id} label={`Shop Heeluna Pro™ — ${price}`} />
+            <AddToCartButton
+              variantId={variant.id}
+              label={`Shop Heeluna Pro™ — ${price}`}
+              className="w-full max-w-xs !px-6 !py-3.5 !text-sm sm:w-auto sm:max-w-none sm:!px-8 sm:!py-4 sm:!text-base"
+            />
           </div>
 
           <ul className="mt-8 flex flex-col gap-2.5 border-t border-line pt-6">

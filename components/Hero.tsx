@@ -145,7 +145,7 @@ export default function Hero({ product }: { product: Product }) {
           <div
             key={f.label}
             data-cursor-hover
-            className="group flex cursor-default items-center gap-2 rounded-full border border-line bg-card px-3 py-2 transition-all duration-300 hover:scale-105 hover:border-clay hover:bg-clay/10"
+            className="group flex cursor-default items-center gap-2 rounded-xl border border-line bg-card px-3 py-2 transition-all duration-300 hover:scale-105 hover:border-clay hover:bg-clay/10"
           >
             <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-pine text-card transition-colors duration-300 group-hover:bg-clay">
               <FeatureIcon name={f.icon} />
