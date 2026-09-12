@@ -20,7 +20,18 @@ async function getProduct() {
   const handle = process.env.NEXT_PUBLIC_PRODUCT_HANDLE || fallbackProduct.handle;
   try {
     const live = await getProductByHandle(handle);
-    if (live) return live;
+    // Price, stock, variants and checkout come from the live Shopify
+    // product — but the photos on the Shopify product record are still the
+    // original supplier/AliExpress images AutoDS imported. Always show our
+    // own product photography instead, regardless of what's on the Shopify
+    // product itself.
+    if (live) {
+      return {
+        ...live,
+        images: fallbackProduct.images,
+        variants: live.variants.map((v) => ({ ...v, image: fallbackProduct.variants[0].image })),
+      };
+    }
   } catch {
     // Storefront API not reachable yet (product still a draft, or env vars
     // not set) — fall back to the real spec/photo content below so the
