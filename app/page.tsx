@@ -8,7 +8,6 @@ import BuySection from "@/components/BuySection";
 import Reveal from "@/components/Reveal";
 import HowItWorks from "@/components/HowItWorks";
 import Specs from "@/components/Specs";
-import SocialProof from "@/components/SocialProof";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -53,7 +52,6 @@ export default async function Home() {
         <Reveal><HowItWorks /></Reveal>
         <Reveal><BuySection product={product} /></Reveal>
         <Reveal><Specs product={product} /></Reveal>
-        <Reveal><SocialProof /></Reveal>
         <Reveal><FAQ /></Reveal>
         <Reveal><FinalCTA product={product} /></Reveal>
       </main>

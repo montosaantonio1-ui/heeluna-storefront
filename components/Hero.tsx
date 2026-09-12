@@ -98,7 +98,12 @@ export default function Hero({ product }: { product: Product }) {
         </p>
 
         <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
-          <AddToCartButton variantId={variant.id} label={`Buy now — ${price}`} />
+          <AddToCartButton
+            variantId={variant.id}
+            label={`Buy now — ${price}`}
+            trackingValue={Number(variant.price.amount)}
+            trackingCurrency={variant.price.currencyCode}
+          />
           <a
             href="#buy"
             data-cursor-hover

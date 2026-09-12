@@ -12,7 +12,13 @@ export default function StickyBuyBar({ product }: { product: Product }) {
           <p className="truncate text-sm font-medium text-ink">{product.title}</p>
           <p className="font-mono text-sm text-ink/60">{formatMoney(variant.price)}</p>
         </div>
-        <AddToCartButton variantId={variant.id} label="Add to bag" className="px-6 py-3 text-sm" />
+        <AddToCartButton
+          variantId={variant.id}
+          label="Add to bag"
+          className="px-6 py-3 text-sm"
+          trackingValue={Number(variant.price.amount)}
+          trackingCurrency={variant.price.currencyCode}
+        />
       </div>
     </div>
   );

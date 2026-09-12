@@ -5,6 +5,7 @@ import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
+import MetaPixel from "@/components/MetaPixel";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${fraunces.variable} ${workSans.variable} ${jetbrainsMono.variable}`}>
       <body>
+        <MetaPixel />
         <ScrollProgress />
         <CustomCursor />
         <CartProvider>

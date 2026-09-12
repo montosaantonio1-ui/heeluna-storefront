@@ -19,6 +19,8 @@ export default function FinalCTA({ product }: { product: Product }) {
             variantId={variant.id}
             label={`Shop Heeluna Pro™ — ${formatMoney(variant.price)}`}
             className="w-full max-w-xs !px-6 !py-3.5 !text-sm sm:w-auto sm:max-w-none sm:!px-8 sm:!py-4 sm:!text-base !bg-card !text-pine hover:!bg-card/90"
+            trackingValue={Number(variant.price.amount)}
+            trackingCurrency={variant.price.currencyCode}
           />
         </div>
       </div>
