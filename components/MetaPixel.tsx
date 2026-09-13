@@ -18,6 +18,7 @@ import Script from "next/script";
 export default function MetaPixel() {
   const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
   if (!pixelId) return null;
+  // force fresh build to pick up NEXT_PUBLIC_META_PIXEL_ID (cache-bust)
 
   return (
     <>
